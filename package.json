@@ -13,8 +13,10 @@
     "axios": "^0.19.2",
     "buefy": "^0.8.13",
     "core-js": "^3.6.4",
+    "mongoose": "^5.9.6",
     "vue": "^2.6.11",
-    "vue2-google-maps": "^0.10.7"
+    "vue2-google-maps": "^0.10.7",
+    "express": "latest"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
@@ -23,6 +25,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
+    "express-pino-logger": "^4.0.0",
     "prettier": "2.0.2",
     "vue-template-compiler": "^2.6.11"
   },
