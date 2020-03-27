@@ -2,10 +2,13 @@
   "name": "covid19",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8080",
   "scripts": {
     "serve": "vue-cli-service serve",
+    "dev": "run-p serve server",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "server": "node-env-run server --exec nodemon | pino-colada"
   },
   "dependencies": {
     "@fortawesome/vue-fontawesome": "^0.1.9",
@@ -13,10 +16,13 @@
     "axios": "^0.19.2",
     "buefy": "^0.8.13",
     "core-js": "^3.6.4",
+    "express": "latest",
     "mongoose": "^5.9.6",
+    "nodemon": "^2.0.2",
+    "serve-static": "latest",
     "vue": "^2.6.11",
     "vue2-google-maps": "^0.10.7",
-    "express": "latest"
+    "body-parser": "latest"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
@@ -26,8 +32,13 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
     "express-pino-logger": "^4.0.0",
+    "morgan": "^1.10.0",
     "prettier": "2.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "node-env-run": "^3.0.2",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "pino-colada": "^1.5.1"
   },
   "eslintConfig": {
     "root": true,
