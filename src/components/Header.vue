@@ -6,7 +6,7 @@
             </b-navbar-item>
             <b-navbar-item tag="div">
                 <div class="buttons">
-                    <a class="button is-primary">
+                    <a class="button is-primary" @click="handleAddBtnClick">
                         <strong>Add my details</strong>
                     </a>
                 </div>
@@ -16,11 +16,16 @@
 </template>
 
 <script>
-  export default {
-    name: "Header"
-  };
+import { eventEmitter } from "../main";
+
+export default {
+    name: "Header",
+    methods: {
+        handleAddBtnClick() {
+            eventEmitter.$emit("isOpened");
+        },
+    },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

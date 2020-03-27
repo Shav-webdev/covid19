@@ -2,29 +2,35 @@
   <div id="app">
     <Header></Header>
     <GoogleMap />
+    <ModalForm ></ModalForm>
   </div>
 </template>
 
 <script>
+
 import GoogleMap from './components/GoogleMap.vue'
 import Header from "./components/Header";
+import ModalForm from "./components/ModalForm";
 
 export default {
   name: 'App',
   components: {
     GoogleMap,
-    Header
+    Header,
+    ModalForm
+  },
+  data() {
+    return {
 
-  }
+    }
+  },
+  methods: {
+
+  },
+
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+
 </style>

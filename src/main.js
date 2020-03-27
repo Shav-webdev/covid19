@@ -4,16 +4,17 @@ import * as VueGoogleMaps from "vue2-google-maps";
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
 
-Vue.use(Buefy)
+Vue.use(Buefy);
 
 Vue.use(VueGoogleMaps, {
     load: {
         key: "",
         libraries: "places",
     },
-
     installComponents: true,
 });
+
+export const eventEmitter = new Vue();
 
 Vue.config.productionTip = false;
 
