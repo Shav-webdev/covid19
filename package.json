@@ -4,13 +4,12 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "dev": "run-p serve server",
+    "start": "run-p serve server",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "server": "node-env-run server --exec nodemon | pino-colada"
   },
   "dependencies": {
-    "@fortawesome/vue-fontawesome": "^0.1.9",
     "@mdi/font": "^5.0.45",
     "axios": "^0.19.2",
     "buefy": "^0.8.13",
@@ -38,7 +37,13 @@
     "node-env-run": "^3.0.2",
     "nodemon": "^2.0.2",
     "npm-run-all": "^4.1.5",
-    "pino-colada": "^1.5.1"
+    "pino-colada": "^1.5.1",
+    "request": "^2.81.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
   },
   "eslintConfig": {
     "root": true,
