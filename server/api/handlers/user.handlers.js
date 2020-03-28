@@ -1,5 +1,54 @@
+const url = require("url");
+const querystring = require("querystring");
+const User = require("../models/user.model");
 
+module.exports.createUser = (req, res) => {
+    const userData = req.body;
+    const user = new User({
+        ...userData,
+        birthday: userData.year,
+        location: { coordinates: [userData.longitude, userData.latitude] },
+    });
+    user.save(err => {
+        if (err) {
+            if (err.name === "ValidationError") {
+                return res.status(400).send({ message: err.message });
+            }
+            return res.status(404).send({
+                message: "Something went wrong",
+            });
+        }
+        res.status(201).send({ message: "Data successfully created!" });
+    });
+};
 
-module.exports.getUserData = (req, res) => {
-    console.log("Request body", req.body)
-}
+module.exports.getUsers = async (req, res) => {
+    let parsedUrl = url.parse(req.url);
+    let parsedQs = querystring.parse(parsedUrl.query);
+    const userLocation = [parsedQs.longitude, parsedQs.latitude];
+
+    try {
+        User.find({
+            location: {
+                $near: {
+                    $geometry: {
+                        type: "Point",
+                        coordinates: userLocation,
+                    },
+                    $minDistance: 10,
+                    $maxDistance: 1000,
+                },
+            },
+        })
+            .then(users => {
+                res.status(200).send(users);
+            })
+            .catch(e => {
+                res.status(404).send({
+                    message: "No user founded",
+                });
+            });
+    } catch (e) {
+        console.log(e);
+    }
+};

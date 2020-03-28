@@ -2,7 +2,6 @@
   "name": "covid19",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8080",
   "scripts": {
     "serve": "vue-cli-service serve",
     "dev": "run-p serve server",
@@ -22,7 +21,8 @@
     "serve-static": "latest",
     "vue": "^2.6.11",
     "vue2-google-maps": "^0.10.7",
-    "body-parser": "latest"
+    "body-parser": "latest",
+    "http-proxy-middleware": "latest"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
