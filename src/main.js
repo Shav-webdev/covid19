@@ -1,8 +1,8 @@
 import Vue from "vue";
 import App from "./App.vue";
 import * as VueGoogleMaps from "vue2-google-maps";
-import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
+import Buefy from "buefy";
+import "buefy/dist/buefy.css";
 
 Vue.use(Buefy);
 

@@ -98,7 +98,6 @@ export default {
         onFindBtnClick() {
             const that = this;
             function success(pos) {
-                console.log("Position is:", pos);
                 const crd = pos.coords;
                 that.latitude = crd.latitude;
                 that.longitude = crd.longitude;
