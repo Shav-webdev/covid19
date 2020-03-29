@@ -9,16 +9,17 @@
             </b-navbar-item>
         </template>
         <template slot="start">
-            <b-navbar-item href="#">
-                Home
-            </b-navbar-item>
             <b-navbar-item tag="div">
+
                 <div class="buttons">
-                    <a class="button is-primary" @click="handleAddBtnClick">
+                    <a class="button is-success" @click="handleAddBtnClick">
                         <strong>Add my details</strong>
                     </a>
                 </div>
             </b-navbar-item>
+        </template>
+        <template slot="end">
+            <slot></slot>
         </template>
     </b-navbar>
 </template>

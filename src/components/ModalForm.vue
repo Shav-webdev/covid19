@@ -7,7 +7,8 @@
             aria-role="dialog"
             aria-modal
         >
-            <UserDataForm> </UserDataForm>
+            <UserDataForm :closeModal="closeModal" :latitude="latitude" :longitude="longitude">
+            </UserDataForm>
         </b-modal>
     </section>
 </template>
@@ -20,10 +21,16 @@ export default {
     components: {
         UserDataForm,
     },
+    props: ["latitude", "longitude"],
     data() {
         return {
             isOpenModal: false,
         };
+    },
+    methods: {
+        closeModal() {
+            this.isOpenModal = false;
+        }
     },
     created() {
         eventEmitter.$on("isOpened", () => {
