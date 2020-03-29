@@ -103,7 +103,6 @@ export default {
                 that.latitude = crd.latitude;
                 that.longitude = crd.longitude;
             }
-
             function error(err) {
                 console.warn(`ERROR(${err.code}): ${err.message}`);
             }
