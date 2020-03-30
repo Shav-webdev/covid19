@@ -1,29 +1,35 @@
 {
   "name": "covid19",
   "version": "0.1.0",
+  "engines": {
+    "node": "12.16.1"
+  },
   "private": true,
   "scripts": {
-    "start": "vue-cli-service serve",
+    "start": "node server.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@mdi/font": "^5.0.45",
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
-    "vue-template-compiler": "^2.6.11",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.1.2",
-    "@mdi/font": "^5.0.45",
     "axios": "^0.19.2",
+    "babel-eslint": "^10.0.3",
     "body-parser": "latest",
     "buefy": "^0.8.13",
     "core-js": "^3.6.4",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "express": "^4.17.1",
     "http-proxy-middleware": "latest",
+    "node-env-run": "^3.0.2",
+    "serve-static": "^1.14.1",
     "vee-validate": "^3.2.5",
     "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11",
     "vue2-google-maps": "^0.10.7",
     "vuex": "^3.1.3"
   },
